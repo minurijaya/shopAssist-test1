@@ -1,0 +1,17 @@
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let product of product">
+      <ion-thumbnail slot="start" width='100px'>
+        <ion-img [src]='product.imageUrl'></ion-img>
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">{{product.name}} <p>Added to interested list</p>
+      </ion-label>
+      <ion-button fill="clear" color="secondary"  (click)="presentAlertConfirm()">
+        <ion-icon name="heart"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
